@@ -1,4 +1,5 @@
-﻿#region fesiller
+﻿
+#region fesiller
 
 //Console.WriteLine("Bir ay daxil edin:");
 //string ay = "Mart";
@@ -68,7 +69,10 @@ Console.WriteLine("b nin sonraki deyeri:"+b);
 #endregion
 #region Verilmish ededin 3-un quvveti olub-olmamasini tapin.
 
-//int num = 243;
+//Console.WriteLine("Eded Daxil edin: ");
+//int num = Convert.ToInt32(Console.ReadLine());
+
+
 //if (num % 3 == 1 || num % 3 == 2 || num == 2 || num < 0)
 //{
 //    Console.WriteLine("bu eded 3un quvveti deyil:");
@@ -84,7 +88,6 @@ Console.WriteLine("b nin sonraki deyeri:"+b);
 //        Console.WriteLine("bu eded 3 un quvvetidir:");
 //    }
 //    else Console.WriteLine("bu eded 3un quvveti deyil:");
-
 //}
 
 #endregion
@@ -167,25 +170,25 @@ for (int i = 0;i< arr.Length;i++)
 */
 #endregion
 #region eded sade yoxsa murekkeb oldugunu tapmaq
-/*
-int num = 13;
-int bolen = 2;
-bool yoxla=true;
-while (bolen < num)
-{
-    if (num%bolen==0)
-    {
-        yoxla = false;
-        Console.WriteLine("bu eded murekkebdir:");
-        break;
-    }
-    bolen++;
-}
-if (yoxla == true)
-{
-    Console.WriteLine("bu eded sade edddir:");
-}
-*/
+
+
+//int num = 13;
+//bool sade = true;
+
+//for (int i = 2; i < num; i++)
+//{
+//    if (num % i == 0)
+//    {
+//        sade = false;
+//        Console.WriteLine("bu eded murekkebdir:");
+//        break;
+//    }
+//}
+//if (sade == true)
+//{
+//    Console.WriteLine("bu eded sade edddir:");
+//}
+
 #endregion
 #region input:234 >>2+3+4=9
 
@@ -261,19 +264,19 @@ else {
 
 #endregion
 #region 3 və ya 5-in qatları
-/*
-int num = 10;
-int cem = 0;
-    for (int i =0; i<num;i++)
-    {
-       for (int j = i; j%3==0||j%5==0; j++)
-       {
-          cem += j;
-          break;
-       }
-    }
-          Console.WriteLine(cem);
-*/
+
+//int num = 10;
+//int cem = 0;
+//for (int i = 0; i <= num; i++)
+//{
+//    for (int j = i; j % 3 == 0 || j % 5 == 0; j++)
+//    {
+//        cem += j;
+//        break;
+//    }
+//}
+//Console.WriteLine(cem);
+
 #endregion
 #region fibanocii
 
@@ -633,9 +636,18 @@ for (int i = 0; i < arr.Length; i++)
 
 
 
-
 //1ci gun
 #region Task 1 Ucus Bileti
+
+
+/*
+// Yas a Gore 12 yasdan az user 50% endirim 12 ve 65 yas arasi user 10% endirim 65 yasdan yuxari user 30% endirim
+// Eger ki gedis ve donus varsa 20% endirim elave 
+// her 1 km ucun mebleh = 12$
+//
+*/
+
+
 
 //int yas, km, tip;
 //double fiyat;
@@ -824,3 +836,386 @@ for (int i = 0; i < arr.Length; i++)
 
 //Console.WriteLine(isPalindrom(121));
 #endregion
+
+
+//2ci gun
+#region CustomTrim Eve
+//string originalString = "   Bu bir örnek metindir.   ";
+//string customTrimmedString = CustomTrim(originalString);
+//Console.WriteLine(originalString);
+//Console.WriteLine(customTrimmedString);
+
+//string CustomTrim(string input)
+//{
+//    int startIndex = 0;
+//    while (startIndex < input.Length && input[startIndex] == ' ')
+//    {
+//        startIndex++;
+//    }
+
+//    int endIndex = input.Length - 1;
+//    while (endIndex >= 0 && input[endIndex] == ' ')
+//    {
+//        endIndex--;
+//    }
+
+//    if (startIndex <= endIndex)
+//    {
+//        int length = endIndex - startIndex + 1;
+//        char[] resultArray = new char[length];
+
+//        for (int i = 0; i < length; i++)
+//        {
+//            resultArray[i] = input[startIndex + i];
+//        }
+
+//        return new string(resultArray);
+//    }
+//    else return string.Empty;
+//}
+
+#endregion
+
+#region customReplace Char
+//string customReplace(string word, char oldValue, string newValue)
+//{
+//    string result = "";
+//    for (int i = 0; i < word.Length; i++)
+//    {
+//        if (word[i] == oldValue)
+//            result += newValue;
+//        else result += word[i];
+//    }
+//    return result;
+//}
+
+//string test = "Ali";
+//Console.WriteLine(customReplace(test, 'A', "M"));
+
+
+//string customReplace(string word, string oldValue, string newValue)
+//{
+//    // Sonuç için bir dize oluştur
+//    string result = "";
+
+//    // Dizide gezin
+//    for (int i = 0; i < word.Length; i++)
+//    {
+//        // Eğer mevcut konumdan itibaren eski değerle eşleşme bulunursa
+//        if (word.Substring(i).StartsWith(oldValue))
+//        {
+//            // Yeni değeri ekle
+//            result += newValue;
+
+//            // Eski değerin uzunluğunu atla
+//            i += oldValue.Length - 1;
+//        }
+//        else
+//        {
+//            // Eğer eşleşme yoksa, mevcut karakteri ekle
+//            result += word[i];
+//        }
+//    }
+//    return result;
+//}
+//string test = "Salam";
+
+//Console.WriteLine(customReplace(test, "Sal", "M"));
+
+#endregion
+
+//Console.WriteLine("Xos gelmisiniz :)");
+//Console.WriteLine("Zehmet olmasa istifadeci adi ve sifrenizi daxil edin..");
+//Console.Write("Istifadeci adi : ");
+//string username = Console.ReadLine();
+//Console.Write("Parol : ");
+//string password = Console.ReadLine();
+//string name = "Onur Aliyev";
+//decimal balans = 10000;
+
+//if (username == "Onur" && password == "Onur0101")
+//    while (true)
+//    {
+//        {
+//            Console.WriteLine("**********************************************");
+//            Console.ForegroundColor = ConsoleColor.DarkCyan;
+//            Console.WriteLine(name + " Xos gelmisiniz :)");
+//            Console.ResetColor();
+//            Console.WriteLine("1)Balansi gostermek");
+//            Console.WriteLine("2)Balansdan mexaric etmek");
+//            Console.WriteLine("3)Balansa medaxil etmek");
+//            Console.WriteLine("0)Hesabdan cixis etmek");
+//            Console.ForegroundColor = ConsoleColor.Magenta;
+//            Console.Write("Etmek istediyiniz emeliyyat nomresini secin : ");
+//            Console.ResetColor();
+//            string secim1 = Console.ReadLine();
+
+//            switch (secim1)
+//            {
+//                case "0":
+//                    return;
+//                case "1":
+//                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+//                    Console.WriteLine("Balansiniz " + balans + " teskil edir.");
+//                    Console.ResetColor();
+//                    break;
+//                case "2":
+//                    Console.ForegroundColor = ConsoleColor.Magenta;
+//                    Console.Write("Mexaric etmek istediyiniz meblegi yazin : ");
+//                    Console.ResetColor();
+//                    decimal mexaric = Convert.ToDecimal(Console.ReadLine());
+//                    if (mexaric > balans)
+//                    {
+//                        Console.ForegroundColor = ConsoleColor.DarkRed;
+//                        Console.WriteLine("Daxil etdiyiniz mebleg balansinizda yoxdur...");
+//                        Console.WriteLine("Zehmet olmasa balansiniza uygun meblegi daxil edin...");
+//                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+//                        Console.WriteLine("Sizin balansiniz " + balans + " teskil edir...");
+//                        Console.ResetColor();
+//                    }
+//                    else if (mexaric <= 0)
+//                    {
+//                        Console.ForegroundColor = ConsoleColor.DarkRed;
+//                        Console.WriteLine("Mexaric edilen mebleg 0 ve ya - ola bilmez...");
+//                        Console.ResetColor();
+//                    }
+//                    else
+//                    {
+//                        Console.ForegroundColor = ConsoleColor.Cyan;
+//                        Console.WriteLine("Hesabinizdan " + mexaric + " mexaric olundu...");
+//                        Console.ResetColor();
+//                        balans = balans - mexaric;
+//                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+//                        Console.WriteLine("Sizin yeni balansiniz " + balans + " teskil edir");
+//                        Console.ResetColor();
+//                    }
+//                    break;
+//                case "3":
+//                    Console.ForegroundColor = ConsoleColor.Magenta;
+//                    Console.Write("Medaxil etmek istediyiniz meblegi daxil edin : ");
+//                    Console.ResetColor();
+//                    decimal medaxil = Convert.ToDecimal(Console.ReadLine());
+//                    if (medaxil <= 0)
+//                    {
+//                        Console.ForegroundColor = ConsoleColor.DarkRed;
+//                        Console.WriteLine("Medaxil edilen mebleg 0 ve ya - ola bilmez...");
+//                        Console.ResetColor();
+//                    }
+//                    else
+//                    {
+//                        Console.ForegroundColor = ConsoleColor.Green;
+//                        Console.WriteLine("Hesabiniza " + medaxil + " medaxil olundu...");
+//                        Console.ResetColor();
+//                        balans = balans + medaxil;
+//                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+//                        Console.WriteLine("Sizin yeni balansiniz " + balans + " teskil edir...");
+//                        Console.ResetColor();
+//                    }
+//                    break;
+
+//            }
+
+//        }
+
+//    }
+//else
+//{
+//    Console.ForegroundColor = ConsoleColor.Red;
+//    Console.WriteLine("Istifadeci adi ve ya sifre duzgun daxil edilmeyib...");
+//    Console.WriteLine("Zehmet olmasa yeniden giris edin...");
+//    Console.ResetColor();
+//}
+
+
+
+
+// Ededin sade ve ya Murekkeb oldugunu gostern bir proqram 
+// Meselen:  13 daxil etdik Eded Sadedir:
+// Meselen:  12 daxil etdik Eded Murekkebdir:
+
+
+
+
+//int number = 957;
+//int bolunenler = 0;
+//if (number == 1)
+//{
+//    Console.WriteLine("eded ne sadedir ne murekkeb");
+
+//}
+//else
+//{
+//    for (int i = 2; i <= number; i++)
+//    {
+//        if (number % i == 0)
+//        {
+//            bolunenler++;
+//            Console.WriteLine("Bolunen Eded" + i );
+//        }
+//    }
+//    if (bolunenler > 2) Console.WriteLine("eded murekkebdir");
+//    else Console.WriteLine("eded sadedir");
+//}
+
+
+
+
+
+//int age, km, secim;
+//double price;
+//int mebleg = 12;
+//int count = 0;
+
+//do
+//{
+//    if (count == 0)
+//    {
+//        Console.WriteLine("Xos Gelmisinz");
+//    }
+//    Yas:
+//    Console.WriteLine("Yasinizi Daxil Edin");
+//    age = Convert.ToInt32(Console.ReadLine());
+
+//    if (age<0)
+//    {
+//        goto Yas;
+//    }
+
+//    Console.WriteLine("Gedeceyniz Mesafeni daxil edin");
+//    km = Convert.ToInt32(Console.ReadLine());
+
+//    Console.WriteLine("1)Yalniz Gedis \n 2)Gedis ve Donus");
+//    secim = Convert.ToInt32(Console.ReadLine());
+//    count++;
+//} while ((age <= 0 || km <= 0) || (secim != 1 || secim != 2));
+
+//price = km * mebleg;
+//if (age < 12)
+//{
+//    price *= 0.5;
+//}
+//else if (age > 12 && age < 65)
+//{
+//    price *= 0.9;
+//}
+//else
+//{
+//    price *= 0.7;
+//}
+//if (secim == 2) price *= 0.8;
+
+//Console.WriteLine($"Odeyeceyiniz Mebleg - {price}");
+
+#region
+//double num = 729;
+//int check = 1;
+//while (num > 1)
+//{
+//    num = num / 3;
+//}
+//if (1 == num)
+//{
+//    Console.WriteLine(" Ucun quvvetidir");
+//}
+//else
+//{
+//    Console.WriteLine(" Ucun quvveti DEYIL");
+//}
+
+
+
+
+
+string authors = "Mahesh Chand, Henry He, Chris Love, Raj Beniwal, Praveen Kumar";
+string[] authorsList = authors.Split(", ");
+foreach (string author in authorsList)
+{
+    Console.WriteLine(author);
+}
+
+
+
+#endregion
+
+
+
+#region CustomSplit
+//string[] result = CustomSplit("Salam Aleykum, Her vaxtiniz xeyir", ',');
+
+//foreach (var item in result)
+//{
+//    Console.WriteLine(item);
+//}
+
+
+//string[] CustomSplit(string sentence, char separator)
+//{
+//    int count = CountOccurrences(sentence, separator) + 1; // geri donen arrayin uzunlugu
+//    string[] parts = new string[count]; // yeni arrayin uzulugunu yaz
+
+//    int partIndex = 0; // index
+
+//    for (int i = 0; i < sentence.Length; i++)
+//    {
+//        if (sentence[i] == separator)
+//        {
+//            // yeni bir hisse'ni tapdiq evvelkinde bura qeder olan hisseni al
+//            parts[partIndex++] = sentence.Substring(0, i);
+
+//            // sonraki index sonraki karakter'den basdayacaq
+//            sentence = sentence.Substring(i + 1);
+//            i = -1; // Döngü'de yeniden 0'lamaq ucun -1 yaziriq
+//        }
+//    }
+
+//    // Döngü bitdiyne gore, son hissenid'e array daxil edirik
+//    parts[partIndex] = sentence;
+
+//    return parts;
+//}
+
+
+//int CountOccurrences(string text, char target)
+//{
+//    int count = 0;
+//    foreach (char c in text)
+//    {
+//        if (c == target)
+//            count++;
+//    }
+//    return count;
+//}
+
+#endregion
+
+#region customTrim
+//string customTrim(string word)
+//{
+//    string result = string.Empty;
+//    int beforeSpaceCount = 0;
+//    for (int i = 0; i < word.Length; i++)
+//    {
+//        if (word[i] != ' ') break;
+//        beforeSpaceCount++;
+//    }
+
+//    int afterSpaceIndex = word.Length - 1;
+//    for (int i = word.Length - 1; i >= 0; i--)
+//    {
+//        if (word[i] != ' ') break;
+//        afterSpaceIndex--;
+//    }
+
+//    for (int i = beforeSpaceCount; i <= afterSpaceIndex; i++)
+//    {
+//        result += word[i];
+//    }
+
+//    return result;
+//}
+
+//string name = "   Ulvi  3 ";
+//Console.WriteLine(customTrim(name));
+
+#endregion
+
